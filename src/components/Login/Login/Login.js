@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -18,8 +18,9 @@ const Login = () => {
         navigate('/register')
     }
   return (
-    <div className="w-25 mx-auto mt-5">
-      <Form onSubmit={handleFormSubmit}>
+      <div className="w-25 mx-auto mt-5">
+          <h2 className="mb-4 text-success">Please Login</h2>
+      <Form className="pb-2" onSubmit={handleFormSubmit} >
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control ref={emailRef} type="email" placeholder="Enter email" required autoComplete="off" />
@@ -30,11 +31,11 @@ const Login = () => {
           <Form.Control ref={passRef} type="password" placeholder="Password" required autoComplete="off" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="success" type="submit">
           Submit
         </Button>
           </Form>
-          <p>New to f2c stock? <span className="text-success" onClick={navigatingRegister}>Please Register</span></p>
+          <p>New to f2c stock? <Link to='/register' className="text-success text-decoration-none" onClick={navigatingRegister}>Please Register</Link></p>
     </div>
   );
 };
