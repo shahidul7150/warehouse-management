@@ -19,8 +19,9 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link className="navbar-brand " to="/">
-              F2C STORE
+            <Link className="navbar-brand fw-bold" to="/">
+              <span className="text-success">F2C</span>
+              STORE
             </Link>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
               <li className="nav-item">
@@ -37,14 +38,15 @@ const Navbar = () => {
                 <Link
                   className="nav-link  text-dark"
                   to="blogs"
-                  
                   aria-disabled="true"
                 >
                   Blogs
                 </Link>
               </li>
             </ul>
-            <Link className="text-decoration-none text-dark" to="/login">Login</Link>
+            <Link className="text-decoration-none text-dark" to="/login">
+              Login
+            </Link>
           </div>
         </div>
       </nav>
