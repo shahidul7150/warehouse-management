@@ -29,21 +29,22 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="about">
+                <Link className="nav-link text-dark" to="about">
                   About
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link "
+                  className="nav-link  text-dark"
                   to="blogs"
-                  tabindex="-1"
+                  
                   aria-disabled="true"
                 >
                   Blogs
                 </Link>
               </li>
             </ul>
+            <Link className="text-decoration-none text-dark" to="/login">Login</Link>
           </div>
         </div>
       </nav>
