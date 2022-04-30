@@ -6,10 +6,10 @@ import auth from "../../firebase.init";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
   const handleSignOut = () => {
-    signOut(auth)
-  }
+    signOut(auth);
+  };
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -51,15 +51,31 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            {
-              user ?
-              <button onClick={handleSignOut}>Sign Out</button>
-                :
 
-            <Link className="text-decoration-none text-dark" to="/login">
-              Login
-            </Link>
-            }
+            {user ? (
+              <ul className="privet-nav">
+                <li className="nav-item">
+                  <Link className="nav-link text-dark" to="manage">
+                    Manage Inventory
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-dark" to="myitem">
+                    My Items
+                  </Link>
+                </li>
+                <button
+                  className="btn btn-link text-decoration-none text-dark"
+                  onClick={handleSignOut}
+                >
+                  Sign Out
+                </button>
+              </ul>
+            ) : (
+              <Link className="text-decoration-none text-dark" to="/login">
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </nav>

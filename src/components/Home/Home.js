@@ -1,10 +1,14 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import Products from '../Products/Products';
 
 
 
 const Home = () => {
+    const [user] = useAuthState(auth)
+
 const navigate=useNavigate()
     return (
         <div>
@@ -12,9 +16,13 @@ const navigate=useNavigate()
                 <div>
                 <h2 className='display-4 fw-bold text-white'>F2C Inventory System</h2>
                     <h4 className='text-light'>Maintenance your warehouse</h4>
-                    
+                    {
+                        !user?
+                            <input onClick={() => navigate('/register')} className='btn btn-warning mt-2' type="button" value="Join Now" />
+                            :''
+                    }
+                        
                   
-                      <input onClick={()=>navigate('/register')} className='btn btn-warning mt-2' type="button" value="Join Now" />
    
                    
                 </div>

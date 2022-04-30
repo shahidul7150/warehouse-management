@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 
 const Login = () => {
@@ -22,7 +22,8 @@ const Login = () => {
       signInWithEmailAndPassword(email,password)
       event.target.reset()
     };
-    
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const navigatingRegister = (event) => {
         navigate('/register')
     }
@@ -30,7 +31,7 @@ const Login = () => {
         <h3>Loading..........</h3>
     }
     if (user) {
-        navigate('/blogs')
+        navigate(from, { replace: true });
     }
   return (
       <div className="w-25 mx-auto mt-5">
