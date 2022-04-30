@@ -1,11 +1,15 @@
 import React, { useRef } from "react";
-import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {  Form } from "react-bootstrap";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
+  const [sendPasswordResetEmail, sending, resetPasserror] = useSendPasswordResetEmail(
+    auth
+  );
     const [
         signInWithEmailAndPassword,
         user,
@@ -27,9 +31,15 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     const navigatingRegister = (event) => {
         navigate('/register')
-    }
+  }
+  const resetPassword = async (event) => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail (email)
+    console.log('Toast');
+    await toast('send email')
+  }
     if (loading) {
-        <h3>Loading..........</h3>
+       return <h3>Loading..........</h3>
     }
     if (user) {
         navigate(from, { replace: true });
@@ -52,8 +62,10 @@ const Login = () => {
          
           </Form>
           <p>New to f2c stock? <Link to='/register' className="text-success text-decoration-none" onClick={navigatingRegister}>Please Register</Link></p>
+          <p>Forget Password? <span style={{cursor:"pointer"}} className="text-success text-decoration-none" onClick={resetPassword}>Reset Password</span></p>
 
-          <SocialLogin></SocialLogin>
+      <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };
