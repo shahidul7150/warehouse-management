@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Machine parts",
+    "price": "250",
+    "description": "Mechanic works on the engine of the car in the garage.",
+    "img": "https://i.ibb.co/KVKXwvs/car-repair-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Engine Oil",
+    "price": "360",
+    "description": "Pouring oil to car engine.This oil is pure and important for engine",
+    "img": "https://i.ibb.co/j5Tj1L8/car-repair-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Car Headlight",
+    "price": "120",
+    "description": "Customized car headlight, Concept of car inspection service and car repair service.",
+    "img": "https://i.ibb.co/XXpHb0r/car-repair-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Tire Changing",
+    "price": "410",
+    "description": "The car mechanic is changing the tire.",
+    "img": "https://i.ibb.co/XtdV25V/car-repair-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Car-painting",
+    "price": "830",
+    "description": "Man with protective clothes and mask painting car using spray compressor.",
+    "img": "https://i.ibb.co/gzL19Hg/car-repair-5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "car mechanic working",
+    "price": "340",
+    "description": "A car mechanic working on the underside of a car",
+    "img": "https://i.ibb.co/1mwkjWB/car-repair-6.jpg"
+  }
+]

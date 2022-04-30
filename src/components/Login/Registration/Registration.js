@@ -1,16 +1,12 @@
 import React, { useRef } from "react";
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 
 const Registration = () => {
-    const [
-        createUserWithEmailAndPassword,
-        user,
-        loading,
-        error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
   const nameRef = useRef("");
   const emailRef = useRef("");
@@ -21,20 +17,20 @@ const Registration = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passRef.current.value;
-      console.log(name, email, password);
-      createUserWithEmailAndPassword(email,password)
+    console.log(name, email, password);
+    createUserWithEmailAndPassword(email, password);
     event.target.reset();
   };
 
   const navigatingLogin = (event) => {
     navigate("/login");
-    };
-    if (loading) {
-        <h3 className="display-3">Loading........</h3>
-    }
-    if (user) {
-        navigate('/')
-    }
+  };
+  if (loading) {
+    <h3 className="display-3">Loading........</h3>;
+  }
+  if (user) {
+    navigate("/");
+  }
   return (
     <div className="w-25 mx-auto mt-5">
       <h2 className="mb-4 text-success">Please Register</h2>
