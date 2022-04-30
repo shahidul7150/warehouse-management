@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Registration = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -77,7 +78,8 @@ const Registration = () => {
         >
           Please Login
         </Link>
-      </p>
+          </p>
+          <SocialLogin></SocialLogin>
     </div>
   );
 };

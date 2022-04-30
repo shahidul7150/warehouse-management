@@ -11,7 +11,7 @@ const Navbar = () => {
     signOut(auth);
   };
   return (
-    <div className="container">
+    <div className="">
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
         <div className="container-fluid">
           <button

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import About from './components/About/About';
 import Blogs from './components/Blogs/Blogs';
 import Checkout from './components/Checkout/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login/Login';
 import Registration from './components/Login/Registration/Registration';
@@ -42,6 +43,7 @@ function App() {
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
