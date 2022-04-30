@@ -7,6 +7,7 @@ import Login from './components/Login/Login/Login';
 import Registration from './components/Login/Registration/Registration';
 import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/NotFound/NotFound';
+import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
+        <Route path='/service/:serviceId' element={<ServiceDetail></ServiceDetail>}></Route>
         <Route path='about' element={<About></About>}></Route>
         <Route path='blogs' element={<Blogs></Blogs>}></Route>
         <Route path='login' element={<Login></Login>}></Route>
