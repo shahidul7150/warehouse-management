@@ -7,7 +7,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Registration = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
   const navigate = useNavigate();
   const nameRef = useRef("");
   const emailRef = useRef("");
