@@ -60,6 +60,11 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link text-dark" to="addservice">
+                    Add Item
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link text-dark" to="myitem">
                     My Items
                   </Link>
