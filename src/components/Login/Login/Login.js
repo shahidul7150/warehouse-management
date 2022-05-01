@@ -61,7 +61,8 @@ const Login = () => {
         <input className="btn btn-success" variant="success" type="submit" value="Login"/>
          
           </Form>
-          <p>New to f2c stock? <Link to='/register' className="text-success text-decoration-none" onClick={navigatingRegister}>Please Register</Link></p>
+      <p>New to f2c stock? <Link to='/register' className="text-success text-decoration-none" onClick={navigatingRegister}>Please Register</Link></p>
+  
           <p>Forget Password? <span style={{cursor:"pointer"}} className="text-success text-decoration-none" onClick={resetPassword}>Reset Password</span></p>
 
       <SocialLogin></SocialLogin>

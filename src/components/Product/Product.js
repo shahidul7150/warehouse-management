@@ -6,7 +6,7 @@ import "./Product.css";
 const Product = ({ product }) => {
 
   console.log(product);
-    const { id,name, price, description, img } = product;
+    const {_id,name, price, description, img } = product;
     
     const navigate = useNavigate();
     const navigateServiceDetail = id => {
@@ -18,7 +18,7 @@ const Product = ({ product }) => {
       <h3>{name}</h3>
       <h4>Price: ${price}</h4>
       <p>{description}</p>
-      <input onClick={()=>navigateServiceDetail(id)} className="btn btn-success" type="submit" value="Details" />
+      <input onClick={()=>navigateServiceDetail(_id)} className="btn btn-success" type="submit" value="Details" />
     </div>
   );
 };
