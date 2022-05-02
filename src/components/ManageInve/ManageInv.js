@@ -2,7 +2,23 @@ import React from "react";
 import useProducts from "../hooks/useProduct";
 
 const ManageInv = () => {
-  const [products] = useProducts();
+    const [products,setProducts] = useProducts();
+    
+    const handleDelete = id => {
+        const proceed = window.confirm("Are you sure want to delete?");
+        if(proceed){
+            const url = `http://localhost:5000/service/${id}`;
+            fetch(url, {
+                method:"DELETE"
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = products.filter(product => product._id !== id);
+                    setProducts(remaining)
+            })
+        }
+    }
   return (
     <div className="w-50 mx-auto">
       <h2 className="mb-4 mt-5">Manage inventory</h2>
@@ -18,7 +34,7 @@ const ManageInv = () => {
               </div>
               
               <div className="w-25">
-                  <button  className="mb-2 btn btn-danger  w-50">X</button>
+                  <button onClick={()=>handleDelete(product._id)} className="mb-2 btn btn-danger  w-50">X</button>
                   <br />
                   <button className=" btn btn-primary w-50">Edit</button>
               </div>
