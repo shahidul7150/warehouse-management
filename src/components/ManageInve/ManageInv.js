@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useProducts from "../hooks/useProduct";
 
 const ManageInv = () => {
     const [products,setProducts] = useProducts();
-    
+    const navigate=useNavigate()
     const handleDelete = id => {
+       
         const proceed = window.confirm("Are you sure want to delete?");
         if(proceed){
             const url = `http://localhost:5000/service/${id}`;
@@ -36,7 +38,7 @@ const ManageInv = () => {
               <div className="w-25">
                   <button onClick={()=>handleDelete(product._id)} className="mb-2 btn btn-danger  w-50">X</button>
                   <br />
-                  <button className=" btn btn-primary w-50">Edit</button>
+                  <button onClick={()=>navigate('/update')} className=" btn btn-primary w-50">Edit</button>
               </div>
         </div>
       ))}

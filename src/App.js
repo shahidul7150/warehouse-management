@@ -4,6 +4,7 @@ import About from './components/About/About';
 import AddService from './components/AddService/AddService';
 import Blogs from './components/Blogs/Blogs';
 import Checkout from './components/Checkout/Checkout/Checkout';
+import EditItems from './components/EditItems/EditItems';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login/Login';
@@ -45,6 +46,11 @@ function App() {
         <Route path='/addservice' element={
           <RequireAuth>
             <AddService></AddService>
+          </RequireAuth>
+        }></Route>
+        <Route path='/update' element={
+          <RequireAuth>
+            <EditItems></EditItems>
           </RequireAuth>
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
