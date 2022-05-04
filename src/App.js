@@ -48,7 +48,7 @@ function App() {
             <AddService></AddService>
           </RequireAuth>
         }></Route>
-        <Route path='/update' element={
+        <Route path='/update/:updateId' element={
           <RequireAuth>
             <EditItems></EditItems>
           </RequireAuth>

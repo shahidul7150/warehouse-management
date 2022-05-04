@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Products from "../Products/Products";
 import OptimizeInv from "./OptimizeInventory/OptimizeInv";
+import OurOutlay from "./SeeOurOutlay/OurOutlay";
 
 const Home = () => {
   const [user] = useAuthState(auth);
@@ -33,6 +34,7 @@ const Home = () => {
       <h2 className="text-center my-5">Products</h2>
           <Products></Products>
           <OptimizeInv></OptimizeInv>
+          <OurOutlay></OurOutlay>
     </div>
   );
 };

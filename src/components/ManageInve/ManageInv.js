@@ -1,8 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useProducts from "../hooks/useProduct";
 
 const ManageInv = () => {
+    const { updateId } = useParams();
+    console.log(updateId);
     const [products,setProducts] = useProducts();
     const navigate=useNavigate()
     const handleDelete = id => {
@@ -21,6 +23,10 @@ const ManageInv = () => {
             })
         }
     }
+
+    const navigateEditDetail = id => {
+        navigate(`/update/${id}`)
+    }
   return (
     <div className="w-50 mx-auto">
       <h2 className="mb-4 mt-5">Manage inventory</h2>
@@ -38,7 +44,7 @@ const ManageInv = () => {
               <div className="w-25">
                   <button onClick={()=>handleDelete(product._id)} className="mb-2 btn btn-danger  w-50">X</button>
                   <br />
-                  <button onClick={()=>navigate('/update')} className=" btn btn-primary w-50">Edit</button>
+                  <button onClick={()=>navigateEditDetail(product._id)} className=" btn btn-primary w-50">Edit</button>
               </div>
         </div>
       ))}
