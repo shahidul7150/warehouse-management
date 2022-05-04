@@ -14,7 +14,6 @@ const EditItems = () => {
             .then(res => res.json())
             .then(data => setProducts(data));
     },[])
-console.log(products);
     return (
         <div>
             <h3>Edit items {products.name}</h3>

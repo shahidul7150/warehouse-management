@@ -1,10 +1,8 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useProducts from "../hooks/useProduct";
 
 const ManageInv = () => {
-    const { updateId } = useParams();
-    console.log(updateId);
     const [products,setProducts] = useProducts();
     const navigate=useNavigate()
     const handleDelete = id => {
