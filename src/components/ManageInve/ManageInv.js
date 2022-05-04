@@ -33,8 +33,9 @@ const ManageInv = () => {
               <div className="d-flex justify-content-start align-items-center" key={product._id}>
           <img width="50px" height="50px" className="me-4" src={product.img} alt="" />
               <div>
-              <h4>{product.name}</h4>
+                      <h4>{product.name}</h4>
           <h4>Price: ${product.price}</h4>
+                      <small>Available: {product.quantity}</small>
           <p>{product.description}</p>
           </div>
               </div>
