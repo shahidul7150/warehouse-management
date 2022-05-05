@@ -1,0 +1,14 @@
+@media only screen and (max-width:667px){
+    .sm-container{
+        width: 100%;
+
+
+    }
+    .sm-content img{
+        display: block;
+    }
+    
+    .sm-btn{
+        display: flex;
+    }
+}

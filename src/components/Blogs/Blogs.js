@@ -34,7 +34,7 @@ const Blogs = () => {
               <hr />
               <p className="text-start">SQL is Relational Database.NoSQL database is non-relational database.SQL database are Y axes line and noSql database are X axis line scalability.Sql is table base database system and noSql is key-value pair base database system.MySQL is the Sql database system and mongodb is the no-sql database system.</p>
               <hr className="w-25 mx-auto" />
-              <h3>What is the purpose of jwt and how does it work</h3>
+              
           </div>
     </div>
   );

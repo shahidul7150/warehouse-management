@@ -10,7 +10,7 @@ const [user]=useAuthState(auth)
     useEffect(() => {
         const email = user.email;
         console.log(email);
-        const url=`http://localhost:5000/service?email=${email}`
+        const url=`https://guarded-inlet-97562.herokuapp.com/service?email=${email}`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));

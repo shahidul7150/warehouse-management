@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import useProducts from "../hooks/useProduct";
-
+import './ManageInv.css'
 const ManageInv = () => {
   const [products, setProducts] = useProducts();
   const navigate = useNavigate();
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/service/${id}`;
+      const url = `https://guarded-inlet-97562.herokuapp.com/service/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -25,12 +25,12 @@ const ManageInv = () => {
     navigate(`/update/${id}`);
   };
   return (
-    <div className="w-50 mx-auto">
+    <div className="w-50 mx-auto sm-container">
       <h2 className="mb-4 mt-5">Manage inventory</h2>
       {products.map((product) => (
-        <div  key={product._id} className="d-flex justify-content-between align-items-center border p-2 mb-2">
+        <div  key={product._id} className="small-screen d-flex justify-content-between align-items-center border p-2 mb-2">
           <div
-            className="d-flex justify-content-start align-items-center"
+            className="d-flex justify-content-start align-items-center sm-content"
            
           >
             <img
@@ -48,7 +48,7 @@ const ManageInv = () => {
             </div>
           </div>
 
-          <div className="w-25">
+          <div className="w-25 sm-btn ">
             <button
               onClick={() => handleDelete(product._id)}
               className="mb-2 btn btn-danger  w-50"

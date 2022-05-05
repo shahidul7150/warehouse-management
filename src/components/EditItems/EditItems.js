@@ -12,7 +12,7 @@ const EditItems = () => {
     console.log(products.name);
   // const [products,setProducts] = useProducts();
   useEffect(() => {
-    const url = `http://localhost:5000/service/${updateId}`;
+    const url = `https://guarded-inlet-97562.herokuapp.com/service/${updateId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));
@@ -20,7 +20,7 @@ const EditItems = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
     console.log(data);
-    const url = `http://localhost:5000/service/${updateId}`;
+    const url = `https://guarded-inlet-97562.herokuapp.com/service/${updateId}`;
     fetch(url, {
       method: "PUT",
       headers: {
