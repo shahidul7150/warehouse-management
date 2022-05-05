@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+
 const AddService = () => {
+  
   const { register, handleSubmit } = useForm();
     const onSubmit = (data,event) => {
         
@@ -15,7 +17,8 @@ const AddService = () => {
         })
             .then(res => res.json())
             .then(itemData => {
-            console.log(itemData);
+                console.log(itemData);
+                alert('Product added successfully')
             })
         event.target.reset();
     };

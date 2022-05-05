@@ -11,9 +11,10 @@ const ServiceDetail = () => {
             .then(data => setService(data));
     },[])
     return (
-        <div >
+        <div className='w-50 mx-auto'>
             <h2>{service.name}------Service Detail</h2>
-            <img src={service.img} alt="" />
+            <img width="100%" src={service.img} alt="" />
+            <h4>Name: {service.name}</h4>
             <br />
             <Link to="/checkout">
                 <button className='btn btn-success'>Product Maintain</button>
