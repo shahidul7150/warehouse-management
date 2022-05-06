@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <div className='products-container px-3'>
           {
-              products.slice(0,6).map(product=><Product key={product._id} product={product}></Product>)
+              products?.slice(0,6).map(product=><Product key={product._id} product={product}></Product>)
       }
     </div>
   );

@@ -27,7 +27,7 @@ const ManageInv = () => {
   return (
     <div className="w-50 mx-auto sm-container">
       <h2 className="mb-4 mt-5">Manage inventory</h2>
-      {products.map((product) => (
+      {products?.map((product) => (
         <div  key={product._id} className="small-screen d-flex justify-content-between align-items-center border p-2 mb-2">
           <div
             className="d-flex justify-content-start align-items-center sm-content"
