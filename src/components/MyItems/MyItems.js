@@ -18,6 +18,7 @@ const [user]=useAuthState(auth)
   return (
     <div>
       <h2 className="text-center my-4">My all added items</h2>
+      <h6 className="text-center " >Available items:{products.length} </h6>
       <div  className="myItemsContainer container text-center">
         {products?.map((product) => (
           <MyItem key={product._id} product={product}></MyItem>

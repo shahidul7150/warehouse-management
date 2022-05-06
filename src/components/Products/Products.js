@@ -3,7 +3,9 @@ import useProducts from "../hooks/useProduct";
 import Product from "../Product/Product";
 import './Products.css'
 const Products = () => {
-  const [products]=useProducts()
+
+  const [products] = useProducts()
+
   return (
     <div className='products-container px-3'>
           {

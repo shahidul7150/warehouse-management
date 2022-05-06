@@ -1,8 +1,14 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 import useProducts from "../hooks/useProduct";
 import './ManageInv.css'
 const ManageInv = () => {
+  const [loading] = useAuthState(auth);
+  if (loading) {
+    <h5>Loading.......</h5>
+  }
   const [products, setProducts] = useProducts();
   const navigate = useNavigate();
   const handleDelete = (id) => {
