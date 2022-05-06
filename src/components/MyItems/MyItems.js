@@ -8,9 +8,9 @@ const MyItems = () => {
 const [user]=useAuthState(auth)
   const [products, setProducts] = useState([]);
     useEffect(() => {
-        const email = user.email;
-        console.log(email);
-        const url=`http://localhost:5000/service?email=${email}`
+        // const email = user.email;
+        // console.log(email);
+        const url=`https://guarded-inlet-97562.herokuapp.com/service`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));
