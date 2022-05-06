@@ -4,6 +4,7 @@ import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { toast, ToastContainer } from "react-toastify";
 
 const Registration = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -20,6 +21,7 @@ const Registration = () => {
     const password = passRef.current.value;
     console.log(name, email, password);
     createUserWithEmailAndPassword(email, password);
+    toast('Please verify your email')
     event.target.reset();
   };
 
@@ -79,7 +81,8 @@ const Registration = () => {
           Please Login
         </Link>
           </p>
-          <SocialLogin></SocialLogin>
+      <SocialLogin></SocialLogin>
+      <ToastContainer/>
     </div>
   );
 };
