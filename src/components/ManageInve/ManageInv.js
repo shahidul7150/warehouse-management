@@ -14,7 +14,7 @@ const ManageInv = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      const url = `https://guarded-inlet-97562.herokuapp.com/service/${id}`;
+      const url = `https://protected-dusk-55781.herokuapp.com/service/${id}`;
       fetch(url, {
         method: "DELETE",
       })

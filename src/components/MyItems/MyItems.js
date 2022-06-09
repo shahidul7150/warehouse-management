@@ -10,7 +10,7 @@ const [user]=useAuthState(auth)
     useEffect(() => {
         // const email = user.email;
         // console.log(email);
-        const url=`https://guarded-inlet-97562.herokuapp.com/service`
+        const url=`https://protected-dusk-55781.herokuapp.com/service`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));
