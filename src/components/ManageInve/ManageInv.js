@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import useProducts from "../hooks/useProduct";
-import './ManageInv.css'
+import './ManageInv.css';
 const ManageInv = () => {
   const [loading] = useAuthState(auth);
   if (loading) {
@@ -14,7 +14,7 @@ const ManageInv = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      const url = `https://protected-dusk-55781.herokuapp.com/service/${id}`;
+      const url = `http://localhost:5000/service/${id}`;
       fetch(url, {
         method: "DELETE",
       })

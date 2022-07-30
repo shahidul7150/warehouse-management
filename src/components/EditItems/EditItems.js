@@ -12,7 +12,7 @@ const EditItems = () => {
     console.log(products.name);
   // const [products,setProducts] = useProducts();
   useEffect(() => {
-    const url = `https://protected-dusk-55781.herokuapp.com/service/${updateId}`;
+    const url = `http://localhost:5000/service/${updateId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));
@@ -20,7 +20,7 @@ const EditItems = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
     console.log(data);
-    const url = `https://protected-dusk-55781.herokuapp.com/service/${updateId}`;
+    const url = `http://localhost:5000/service/${updateId}`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -3,14 +3,14 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 // import useProducts from "../hooks/useProduct";
 import MyItem from "../MyItem/MyItem";
-import './MyItems.css'
+import './MyItems.css';
 const MyItems = () => {
 const [user]=useAuthState(auth)
   const [products, setProducts] = useState([]);
     useEffect(() => {
         // const email = user.email;
         // console.log(email);
-        const url=`https://protected-dusk-55781.herokuapp.com/service`
+        const url=`http://localhost:5000/service`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));

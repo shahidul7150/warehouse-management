@@ -1,10 +1,13 @@
-.nav-bars{
-    display: grid;
-    grid-template-columns: 4fr 8fr;
+.nav-bars {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
 }
-.privet-nav{
-    display: flex;
+.privet-nav {
+  display: flex;
 }
-.privet-nav li{
-    list-style: none;
+.privet-nav li {
+  list-style: none;
+}
+.bg-yellow {
+  background-color: rgb(10, 141, 10);
 }

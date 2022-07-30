@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   return (
     <div className="">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white">
+      <nav className="navbar navbar-expand-lg bg-yellow ">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -26,24 +26,24 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link className="navbar-brand fw-bold" to="/">
-              <span className="text-success">F2C</span>
+            <Link className="navbar-brand fw-bold text-white" to="/">
+              <span className="text-white">F2C</span>
               STORE
             </Link>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="home">
+                <Link className="nav-link  text-white " aria-current="page" to="home">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="about">
+                <Link className="nav-link text-white " to="about">
                   About
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link  text-dark"
+                  className="nav-link  text-white"
                   to="blogs"
                   aria-disabled="true"
                 >
@@ -55,29 +55,29 @@ const Navbar = () => {
             {user ? (
               <ul className="privet-nav">
                 <li className="nav-item">
-                  <Link className="nav-link text-dark" to="manage">
+                  <Link className="nav-link text-white" to="manage">
                     Manage Inventory
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-dark" to="addservice">
+                  <Link className="nav-link text-white" to="addservice">
                     Add Item
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-dark" to="myitem">
+                  <Link className="nav-link text-white" to="myitem">
                     My Items
                   </Link>
                 </li>
                 <button
-                  className="btn btn-link text-decoration-none text-dark"
+                  className="btn btn-link text-decoration-none text-white"
                   onClick={handleSignOut}
                 >
                   Sign Out
                 </button>
               </ul>
             ) : (
-              <Link className="text-decoration-none text-dark" to="/login">
+              <Link className="text-decoration-none text-white" to="/login">
                 Login
               </Link>
             )}

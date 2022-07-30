@@ -5,7 +5,7 @@ const AddService = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
     console.log(data);
-    const url = `https://protected-dusk-55781.herokuapp.com/service`;
+    const url = `http://localhost:5000/service`;
     fetch(url, {
       method: 'POST',
       headers: {
