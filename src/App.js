@@ -6,6 +6,7 @@ import Blogs from './components/Blogs/Blogs';
 import Checkout from './components/Checkout/Checkout/Checkout';
 import EditItems from './components/EditItems/EditItems';
 import Footer from './components/Footer/Footer';
+import Announce from './components/Home/Announce';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login/Login';
 import Registration from './components/Login/Registration/Registration';
@@ -19,6 +20,7 @@ import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 function App() {
   return (
     <div className="App">
+      <Announce/>
    <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

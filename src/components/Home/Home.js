@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Products from "../Products/Products";
 import Carousel from "./Carousel";
+import CustomerReviews from "./CustomerReviews";
 import Offer from "./Offer";
 import OptimizeInv from "./OptimizeInventory/OptimizeInv";
 import OurOutlay from "./SeeOurOutlay/OurOutlay";
@@ -24,9 +25,10 @@ const Home = () => {
 
 
       
-      <h2 className="text-center my-5">Products</h2>
+      <h2 className="text-center my-5 mx-5">Products</h2>
           <Products></Products>
           <OptimizeInv></OptimizeInv>
+          <CustomerReviews></CustomerReviews>
           <OurOutlay></OurOutlay>
     </div>
   );
