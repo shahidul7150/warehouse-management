@@ -2,7 +2,7 @@ import React from 'react';
 import './OptimizeInv.css';
 const OptimizeInv = () => {
     return (
-        <div className='mt-5'>
+        <div className='mt-5 mb-5'>
             <h3 className='text-center'>Optimize Inventory System</h3>
             <div className='optimize-container'>
                 <div>
