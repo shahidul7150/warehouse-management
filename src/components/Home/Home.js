@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Products from "../Products/Products";
 import Carousel from "./Carousel";
+import Contact from "./contact";
 import Offer from "./Offer";
 import OptimizeInv from "./OptimizeInventory/OptimizeInv";
 import Review from "./Review";
@@ -31,6 +32,7 @@ const Home = () => {
      
           <Review></Review>
           <OurOutlay></OurOutlay>
+          <Contact></Contact>
     </div>
   );
 };
