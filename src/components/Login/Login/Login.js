@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import {  Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import "./Login.css";
 const Login = () => {
   const [sendPasswordResetEmail, sending, resetPasserror] = useSendPasswordResetEmail(
     auth
@@ -45,7 +46,7 @@ const Login = () => {
         navigate(from, { replace: true });
     }
   return (
-      <div className="w-25 mx-auto mt-5">
+      <div className="w-25 mx-auto mt-5 login">
           <h2 className="mb-4 text-success">Please Login</h2>
       <Form className="pb-2" onSubmit={handleFormSubmit} >
         <Form.Group className="mb-3" controlId="formBasicEmail">

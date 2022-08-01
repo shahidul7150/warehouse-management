@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Form } from "react-bootstrap";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../../../firebase.init";
-import SocialLogin from "../SocialLogin/SocialLogin";
 import { toast, ToastContainer } from "react-toastify";
-
+import auth from "../../../firebase.init";
+import '../Login/Login.css';
+import SocialLogin from "../SocialLogin/SocialLogin";
 const Registration = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
@@ -35,7 +35,7 @@ const Registration = () => {
     navigate("/");
   }
   return (
-    <div className="w-25 mx-auto mt-5">
+    <div className="w-25 mx-auto mt-5 register">
       <h2 className="mb-4 text-success">Please Register</h2>
       <Form onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
