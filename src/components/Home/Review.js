@@ -1,17 +1,16 @@
-import SwiperCore, { Autoplay, Pagination } from 'swiper';
+import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
-import { Swiper, SwiperSlide } from "swiper/react";
 import './CustomersReview.css';
 // ...
 const Review = () => {
   SwiperCore.use([Autoplay]);
 return (
     <>
-<h2 className='text-center my-5'>Customers Review</h2>
+<h2 >Customers Review</h2>
 
-    <Swiper
+    {/* <Swiper
           className="home_slider "
           modules={[Pagination,Autoplay]}
           slidesPerView={3}
@@ -105,7 +104,7 @@ return (
         </SwiperSlide>
       
           
-</Swiper>
+</Swiper> */}
 </>
 )
 }

@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import { Form } from "react-bootstrap";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -46,29 +45,68 @@ const Login = () => {
         navigate(from, { replace: true });
     }
   return (
-      <div className="w-25 mx-auto mt-5 login">
-          <h2 className="mb-4 text-success">Please Login</h2>
-      <Form className="pb-2" onSubmit={handleFormSubmit} >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control ref={emailRef} type="email" placeholder="Enter email" required autoComplete="off" />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control ref={passRef} type="password" placeholder="Password" required autoComplete="off" />
-        </Form.Group>
-
-        <input className="btn btn-success" variant="success" type="submit" value="Login"/>
-         
-          </Form>
-      <p>New to f2c stock? <Link to='/register' className="text-success text-decoration-none" onClick={navigatingRegister}>Please Register</Link></p>
   
-          <p>Forget Password? <span style={{cursor:"pointer"}} className="text-success text-decoration-none" onClick={resetPassword}>Reset Password</span></p>
-
-      <SocialLogin></SocialLogin>
-      <ToastContainer />
+    <div class="w-full max-w-xs mx-auto my-7">
+  <form onSubmit={handleFormSubmit} class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+      Email address
+      </label>
+      <input ref={emailRef} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter email" required autoComplete="off" />
     </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        Password
+      </label>
+      <input ref={passRef} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" required autoComplete="off" />
+      
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Sign In
+      </button>
+      <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+        Forgot Password?
+      </a>
+      {/* <p>New to f2c stock? <Link to='/register' className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" onClick={navigatingRegister}>Please Register</Link></p> */}
+    </div>
+    <p>New to f2c stock? <Link to='/register' className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" onClick={navigatingRegister}>Please Register</Link></p>
+  </form>
+  <SocialLogin></SocialLogin> 
+  <p class="text-center text-gray-500 text-xs">
+    &copy;2022 F2C. All rights reserved.
+  </p>
+</div>
+
+
+
+
+
+
+
+    //   <div className=" mx-auto mt-5 login">
+    //       <h2 className="mb-4 text-success">Please Login</h2>
+    //   <Form className="pb-2" onSubmit={handleFormSubmit} >
+    //     <Form.Group className="mb-3" controlId="formBasicEmail">
+    //       <Form.Label>Email address</Form.Label>
+    //       <Form.Control ref={emailRef} type="email" placeholder="Enter email" required autoComplete="off" />
+    //     </Form.Group>
+
+    //     <Form.Group className="mb-3" controlId="formBasicPassword">
+    //       <Form.Label>Password</Form.Label>
+    //       <Form.Control ref={passRef} type="password" placeholder="Password" required autoComplete="off" />
+    //     </Form.Group>
+
+    //     <input className="btn btn-success" variant="success" type="submit" value="Login"/>
+         
+    //       </Form>
+    //   <p>New to f2c stock? <Link to='/register' className="text-success text-decoration-none" onClick={navigatingRegister}>Please Register</Link></p>
+  
+    //       <p>Forget Password? <span style={{cursor:"pointer"}} className="text-success text-decoration-none" onClick={resetPassword}>Reset Password</span></p>
+
+    //   {/* <SocialLogin></SocialLogin> */}
+    //   <ToastContainer />
+    // </div>
   );
 };
 

@@ -35,47 +35,48 @@ const EditItems = () => {
     event.target.reset();
   };
   return (
-      <div>
+    <h1>Edit item</h1>
+    //   <div>
           
-      <h3 className="text-center mb-5">Edit items {products.name}</h3>
+    //   <h3 className="text-center mb-5">Edit items {products.name}</h3>
 
-      <form className="w-25 mx-auto" onSubmit={handleSubmit(onSubmit)}>
-        <input
-          className="d-block w-100 mb-3"
-          {...register("name", { required: true, maxLength: 20 })}
-                  placeholder="Name"
-                  required
-        />
-        <textarea
-          className="d-block w-100 mb-3"
-          {...register("description")}
-                  placeholder="Description"
-                  required
-        />
-        <input
-          className="d-block w-100 mb-3"
-          type="number"
-          {...register("quantity")}
-                  placeholder="quantity"
-                  required
-        />
-        <input
-          className="d-block w-100 mb-3"
-          type="number"
-          {...register("price")}
-                  placeholder="Price"
-                  required
-        />
-        <input
-          className="d-block w-100 mb-3"
-          type="text"
-          {...register("img")}
-                  placeholder="Photo URL"
-                  required
-        />
-        <input className="btn btn-success" type="submit" value="Update item" />
-      </form>
-    </div>
+    //   <form className="w-25 mx-auto" onSubmit={handleSubmit(onSubmit)}>
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       {...register("name", { required: true, maxLength: 20 })}
+    //               placeholder="Name"
+    //               required
+    //     />
+    //     <textarea
+    //       className="d-block w-100 mb-3"
+    //       {...register("description")}
+    //               placeholder="Description"
+    //               required
+    //     />
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       type="number"
+    //       {...register("quantity")}
+    //               placeholder="quantity"
+    //               required
+    //     />
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       type="number"
+    //       {...register("price")}
+    //               placeholder="Price"
+    //               required
+    //     />
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       type="text"
+    //       {...register("img")}
+    //               placeholder="Photo URL"
+    //               required
+    //     />
+    //     <input className="btn btn-success" type="submit" value="Update item" />
+    //   </form>
+    // </div>
   );
 };
 

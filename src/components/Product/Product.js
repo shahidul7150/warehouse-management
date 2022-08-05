@@ -15,7 +15,7 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div className="container product-container">
+    <div className=" product-container">
       <img src={img} alt="" />
       <h3>{name}</h3>
       <h4>Price: ${price}</h4>
@@ -23,7 +23,7 @@ const Product = ({ product }) => {
       <p>{description}</p>
       <input
         onClick={() => navigateServiceDetail(_id)}
-        className="btn btn-success"
+        className=""
         type="submit"
         value="Details"
       />

@@ -1,13 +1,13 @@
 import React from "react";
 import useProducts from "../hooks/useProduct";
 import Product from "../Product/Product";
-import './Products.css'
+import './Products.css';
 const Products = () => {
 
   const [products] = useProducts()
 
   return (
-    <div className='products-container px-3'>
+    <div className=''>
           {
               products?.slice(0,6).map(product=><Product key={product._id} product={product}></Product>)
       }

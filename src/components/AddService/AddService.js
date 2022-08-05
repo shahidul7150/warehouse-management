@@ -22,40 +22,41 @@ const AddService = () => {
   };
 
   return (
-    <div className="w-25 mx-auto mt-5">
-      <h4>Add service</h4>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          className="d-block w-100 mb-3"
-          {...register('name', { required: true, maxLength: 20 })}
-          placeholder="Name"
-        />
-        <textarea
-          className="d-block w-100 mb-3"
-          {...register('description')}
-          placeholder="Description"
-        />
-        <input
-          className="d-block w-100 mb-3"
-          type="number"
-          {...register('quantity')}
-          placeholder="quantity"
-        />
-        <input
-          className="d-block w-100 mb-3"
-          type="number"
-          {...register('price')}
-          placeholder="Price"
-        />
-        <input
-          className="d-block w-100 mb-3"
-          type="text"
-          {...register('img')}
-          placeholder="Photo URL"
-        />
-        <input className="btn btn-success" type="submit" value="Add item" />
-      </form>
-    </div>
+    <h1>Add service</h1>
+    // <div className="w-25 mx-auto mt-5">
+    //   <h4>Add service</h4>
+    //   <form onSubmit={handleSubmit(onSubmit)}>
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       {...register('name', { required: true, maxLength: 20 })}
+    //       placeholder="Name"
+    //     />
+    //     <textarea
+    //       className="d-block w-100 mb-3"
+    //       {...register('description')}
+    //       placeholder="Description"
+    //     />
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       type="number"
+    //       {...register('quantity')}
+    //       placeholder="quantity"
+    //     />
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       type="number"
+    //       {...register('price')}
+    //       placeholder="Price"
+    //     />
+    //     <input
+    //       className="d-block w-100 mb-3"
+    //       type="text"
+    //       {...register('img')}
+    //       placeholder="Photo URL"
+    //     />
+    //     <input className="btn btn-success" type="submit" value="Add item" />
+    //   </form>
+    // </div>
   );
 };
 
