@@ -9,7 +9,7 @@ const Offer = () => {
                 <div>
                     <p className='text-xl font-medium'>Special Capsicum</p>
                     <h3 className='text-3xl font-bold'>Upto 50% Off</h3>
-                  
+                  <button className='py-1 px-2 rounded-xl font-semibold bg-[#FDC40D] mt-3 hover:bg-[#4cbb48f8] hover:text-white '>Get Offer</button>
                 </div>
                 <img className='img-size py-8' src="https://farmingbase.com/wp-content/uploads/2021/04/bell-pepper.png" alt="" />
             </div>
@@ -18,6 +18,7 @@ const Offer = () => {
                 <div>
                 <p className='text-xl font-medium'>Special Grocery</p>
                     <h3 className='text-3xl font-bold'>Upto 50% Off</h3>
+                    <button className='py-1 px-2 rounded-xl font-semibold bg-[#4cbb48f8] mt-3 hover:bg-[#c9401d] hover:text-white'>Get Offer</button>
                 </div>
                 <img className='img-size' src="https://www.dole.com/-/media/project/dole/produce-images/headers/dole-produce-veg-medley.png?rev=e9e55201dbc6451e91cfd7d73d7cdb06&hash=CC1AFA2C5EC625A80EA224E1232FE39B" alt="" />
             </div>
@@ -26,6 +27,7 @@ const Offer = () => {
                 <div>
                 <p className='text-xl font-medium'>Special Bit</p>
                     <h3 className='text-3xl font-bold'>Upto 25% Off</h3>
+                    <button className='py-1 px-2 rounded-xl font-semibold hover:bg-[#4cbb48f8] mt-3 bg-[#c9401d] hover:text-white'>Get Offer</button>
                 </div>
                 <img className='img-size' src="https://santacolor.com/wp-content/uploads/2020/02/beet-red-E60.png" alt="" />
             </div>
