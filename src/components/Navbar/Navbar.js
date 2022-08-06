@@ -1,7 +1,6 @@
 import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
-
 import auth from "../../firebase.init";
 import "./Navbar.css";
 const Navbar = () => {
@@ -14,7 +13,7 @@ const Navbar = () => {
 
 
     return (
-      <div className="navbar bg-base-100 px-12 lg:bg-[#3A3A3A] lg:text-white">
+      <div className="navbar bg-base-100 px-12 lg:bg-[#F9FEFF] lg:shadow lg:font-semibold lg:text-green-500">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -72,8 +71,8 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
-          TOOLS HOUSE
+        <Link to="/" className="text-sm flex ml-8 md:ml-0 lg:text-2xl font-black bg-amber-200 p-2 rounded-lg">
+          <span className="text-red-500 pr-1"> F2C</span> STORE
         </Link>
 
       
