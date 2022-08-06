@@ -1,6 +1,7 @@
 .optimize-container {
   display: grid;
   grid-template-columns: 5fr 7fr;
+  align-items: center;
 
   margin-top: 50px;
   background: #dbe6d73b;

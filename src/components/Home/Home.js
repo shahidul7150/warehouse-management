@@ -2,9 +2,11 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import Products from "../Products/Products";
 import Carousel from "./Carousel";
 
 import Offer from "./Offer";
+import OptimizeInv from "./OptimizeInventory/OptimizeInv";
 
 const Home = () => {
   const [user] = useAuthState(auth);
@@ -19,12 +21,9 @@ const Home = () => {
 <div>
   
 </div>
-
-
-      
-      <h2 className="">Products</h2>
-          {/* <Products></Products>
+          <Products></Products>
           <OptimizeInv></OptimizeInv>
+          {/* <OptimizeInv></OptimizeInv>
      
           <Review></Review>
           <OurOutlay></OurOutlay>
