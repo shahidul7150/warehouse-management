@@ -14,8 +14,8 @@ const Carousel = () => {
             </div>
                 </div>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" class="md:btn md:bg-[#BF383B] outline-none border-0 btn-circle">❮</a> 
-            <a href="#slide2" class="md:btn md:bg-[#BF383B] outline-none border-0 btn-circle">❯</a>
+            <a href="#slide4" class="md:btn md:bg-[#BF383B] outline-none border-none md:btn-circle">❮</a> 
+            <a href="#slide2" class="md:btn md:bg-[#BF383B] outline-none border-none md:btn-circle">❯</a>
           </div>
         </div> 
 
@@ -29,8 +29,8 @@ const Carousel = () => {
             </div>
                 </div>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" class="md:btn md:bg-[#1CA400] outline-none border-0 btn-circle">❮</a> 
-            <a href="#slide3" class="md:btn md:bg-[#1CA400] outline-none border-0 btn-circle">❯</a>
+            <a href="#slide1" class="md:btn md:bg-[#1CA400] outline-none border-none md:btn-circle">❮</a> 
+            <a href="#slide3" class="md:btn md:bg-[#1CA400] outline-none border-none md:btn-circle">❯</a>
           </div>
         </div> 
         <div id="slide3" class="carousel-item relative w-full">
@@ -44,8 +44,8 @@ const Carousel = () => {
             </div>
                 </div>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" class="md:btn md:bg-[#3A3544] outline-none border-0 btn-circle">❮</a> 
-            <a href="#slide4" class="md:btn md:bg-[#3A3544] outline-none border-0 btn-circle">❯</a>
+            <a href="#slide2" class="md:btn md:bg-[#3A3544] outline-none border-none md:btn-circle">❮</a> 
+            <a href="#slide4" class="md:btn md:bg-[#3A3544] outline-none border-none md:btn-circle">❯</a>
           </div>
         </div> 
         <div id="slide4" class="carousel-item relative w-full">
@@ -59,8 +59,8 @@ const Carousel = () => {
                 </div>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
            
-            <a href="#slide3" class="md:btn md:bg-[#A9B550] outline-none border-0 btn-circle">❮</a> 
-            <a href="#slide1" class="md:btn md:bg-[#A9B550] outline-none border-0 btn-circle">❯</a>
+            <a href="#slide3" class="md:btn md:bg-[#A9B550] outline-none border-none md:btn-circle">❮</a> 
+            <a href="#slide1" class="md:btn md:bg-[#A9B550] outline-none border-none md:btn-circle">❯</a>
           </div>
         </div>
       </div>
