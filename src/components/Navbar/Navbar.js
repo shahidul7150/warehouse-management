@@ -41,16 +41,28 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
-            <li>
-              {user&&<NavLink to="/dashboard" className="rounded-lg ">
-                Dashboard
-              </NavLink>}
-            </li>
-            <li>
-              <NavLink to="/portfolio" className="rounded-lg ">
-                My Portfolio
+         
+            {user&& <>
+          <li>
+          <NavLink to="/manage" className="rounded-lg ">
+                Manage Inventory
               </NavLink>
-            </li>
+          </li>
+          <li>
+          <NavLink to="/addservice" className="rounded-lg ">
+                Add Items
+              </NavLink>
+          </li>
+          <li>
+          <NavLink to="/myitem" className="rounded-lg ">
+                My items
+              </NavLink>
+          </li>
+
+         </>
+          
+          
+          }
             <li>
               <NavLink to="/about" className="rounded-lg ">
                 About us

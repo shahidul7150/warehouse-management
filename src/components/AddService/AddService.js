@@ -22,41 +22,44 @@ const AddService = () => {
   };
 
   return (
-    <h1>Add service</h1>
-    // <div className="w-25 mx-auto mt-5">
-    //   <h4>Add service</h4>
-    //   <form onSubmit={handleSubmit(onSubmit)}>
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       {...register('name', { required: true, maxLength: 20 })}
-    //       placeholder="Name"
-    //     />
-    //     <textarea
-    //       className="d-block w-100 mb-3"
-    //       {...register('description')}
-    //       placeholder="Description"
-    //     />
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       type="number"
-    //       {...register('quantity')}
-    //       placeholder="quantity"
-    //     />
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       type="number"
-    //       {...register('price')}
-    //       placeholder="Price"
-    //     />
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       type="text"
-    //       {...register('img')}
-    //       placeholder="Photo URL"
-    //     />
-    //     <input className="btn btn-success" type="submit" value="Add item" />
-    //   </form>
-    // </div>
+    
+    <div className="mx-auto mt-5">
+      <h4 className='text-center text-2xl font-bold'>Add service</h4>
+      <div className='grid md:grid-cols-2 items-center'>
+        <img src="https://st2.depositphotos.com/1494134/7007/v/950/depositphotos_70076425-stock-illustration-cabbage-isolated-on-white-vector.jpg" alt="" />
+      <form className='mx-auto' onSubmit={handleSubmit(onSubmit)}>
+        <input
+          className="block w-96 mb-3 p-3 border"
+          {...register('name', { required: true, maxLength: 20 })}
+          placeholder="Name"
+        />
+        <textarea
+          className="block w-96 mb-3 p-3 border"
+          {...register('description')}
+          placeholder="Description"
+        />
+        <input
+          className="block w-96 mb-3 p-3 border"
+          type="number"
+          {...register('quantity')}
+          placeholder="quantity"
+        />
+        <input
+          className="block w-96 mb-3 p-3 border"
+          type="number"
+          {...register('price')}
+          placeholder="Price"
+        />
+        <input
+          className="block w-96 mb-3 p-3 border"
+          type="text"
+          {...register('img')}
+          placeholder="Photo URL"
+        />
+        <input className="btn btn-success" type="submit" value="Add item" />
+      </form>
+      </div>
+    </div>
   );
 };
 

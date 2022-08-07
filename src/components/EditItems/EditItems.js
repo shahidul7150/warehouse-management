@@ -9,7 +9,7 @@ const EditItems = () => {
   console.log(updateId);
 
     const [products, setProducts] = useProducts();
-    console.log(products.name);
+    console.log(products.img);
   // const [products,setProducts] = useProducts();
   useEffect(() => {
     const url = `http://localhost:5000/service/${updateId}`;
@@ -35,48 +35,50 @@ const EditItems = () => {
     event.target.reset();
   };
   return (
-    <h1>Edit item</h1>
-    //   <div>
+   
+      <div className="py-12">
           
-    //   <h3 className="text-center mb-5">Edit items {products.name}</h3>
-
-    //   <form className="w-25 mx-auto" onSubmit={handleSubmit(onSubmit)}>
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       {...register("name", { required: true, maxLength: 20 })}
-    //               placeholder="Name"
-    //               required
-    //     />
-    //     <textarea
-    //       className="d-block w-100 mb-3"
-    //       {...register("description")}
-    //               placeholder="Description"
-    //               required
-    //     />
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       type="number"
-    //       {...register("quantity")}
-    //               placeholder="quantity"
-    //               required
-    //     />
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       type="number"
-    //       {...register("price")}
-    //               placeholder="Price"
-    //               required
-    //     />
-    //     <input
-    //       className="d-block w-100 mb-3"
-    //       type="text"
-    //       {...register("img")}
-    //               placeholder="Photo URL"
-    //               required
-    //     />
-    //     <input className="btn btn-success" type="submit" value="Update item" />
-    //   </form>
-    // </div>
+      <h3 className="text-center text-2xl font-bold py-5">Edit items {products.name}</h3>
+      <div className='grid md:grid-cols-2 items-center'>
+      <img src={products.img} alt="" />
+      <form className="mx-auto" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          className="block w-96 mb-3 p-3 border"
+          {...register("name", { required: true, maxLength: 20 })}
+                  placeholder={products.name}
+                  required
+        />
+        <textarea
+          className="block w-96 mb-3 p-3 border"
+          {...register("description")}
+                  placeholder="Description"
+                  required
+        />
+        <input
+          className="block w-96 mb-3 p-3 border"
+          type="number"
+          {...register("quantity")}
+                  placeholder="quantity"
+                  required
+        />
+        <input
+          className="block w-96 mb-3 p-3 border"
+          type="number"
+          {...register("price")}
+                  placeholder="Price"
+                  required
+        />
+        <input
+          className="block w-96 mb-3 p-3 border"
+          type="text"
+          {...register("img")}
+                  placeholder="Photo URL"
+                  required
+        />
+        <input className="btn btn-success hover:text-white " type="submit" value="Update item" />
+      </form>
+      </div>
+    </div>
   );
 };
 
