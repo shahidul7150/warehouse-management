@@ -4,8 +4,8 @@ const OptimizeInv = () => {
     return (
 
      
-        <div className='mt-5 mb-5'>
-            <h3 className='text-center'>Optimize Inventory System</h3>
+        <div className='mt-14 mb-5'>
+            <h3 className='text-center text-3xl font-bold '>Optimize Inventory System</h3>
             <div className='optimize-container '>
                 <div> 
                     <img src="https://www.earningdiary.com/wp-content/uploads/2019/07/Manage-Stock-Using-the-Right-Inventory-Management-Tools.png" alt="" />

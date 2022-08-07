@@ -16,7 +16,7 @@ const Product = ({ product }) => {
   return (
     <div class="max-w-2xl mx-auto">
       <div class="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-        <img class="rounded-t-lg p-8" src={img} alt="product image" />
+        <img class="rounded-t-lg p-8 h-52 md:w-64 overflow-hidden" src={img} alt="product image" />
 
         <div class="px-5 pb-5">
           <h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
